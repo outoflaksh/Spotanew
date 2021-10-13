@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #ff6395;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 7.5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 25px;
+}
+
+.cover img {
+  height: 400px;
+  width: auto;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.artist {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  width: 10%;
+  padding: 15px;
+  border-radius: 25px;
+  margin: 10px;
+  border-style: none;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: white;
+}
+
+.spotify {
+  background: #00e06c;
+}
+
+.shuffle {
+  background: #b00038;
 }
