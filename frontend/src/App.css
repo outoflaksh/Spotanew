@@ -14,6 +14,12 @@ body {
 p {
   margin: 7.5px;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -49,12 +55,20 @@ button {
   font-family: "Montserrat";
   font-weight: 500;
   color: white;
+  cursor: pointer;
 }
 
 .spotify {
   background: #00e06c;
 }
+.spotify:hover {
+  background: #00b859;
+}
 
 .shuffle {
   background: #b00038;
+}
+
+.shuffle:hover {
+  background: #88002b;
 }
