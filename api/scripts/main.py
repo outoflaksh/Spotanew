@@ -1,7 +1,7 @@
 import requests
 import random
-from spotify_token import get_token
-from data import playlist_ids
+from .spotify_token import get_token
+from .data import playlist_ids
 
 
 def get_random_song() -> dict:
@@ -33,6 +33,3 @@ def get_random_song() -> dict:
         return song_details
     else:
         return {}
-
-
-print(get_random_song())

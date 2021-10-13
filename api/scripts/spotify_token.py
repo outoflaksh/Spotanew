@@ -1,5 +1,5 @@
 import requests
-from secrets import CLIENT_ID, CLIENT_SECRET
+from .secrets import CLIENT_ID, CLIENT_SECRET
 
 
 def get_token():
