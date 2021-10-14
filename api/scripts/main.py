@@ -6,7 +6,7 @@ from .data import playlist_ids
 
 def get_random_song() -> dict:
     ACCESS_TOKEN = get_token()
-
+    random.shuffle(playlist_ids)
     random_playlist_id = random.choice(playlist_ids)
 
     PLAYIST_URL = f"https://api.spotify.com/v1/playlists/{random_playlist_id}/tracks"
@@ -21,6 +21,7 @@ def get_random_song() -> dict:
 
     if response.status_code == 200:
         songs = response.json()["items"]
+        random.shuffle(songs)
         random_song = random.choice(songs)["track"]
         song_details = {
             "title": random_song["name"],
