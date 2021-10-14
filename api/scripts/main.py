@@ -26,7 +26,7 @@ def get_random_song() -> dict:
             "title": random_song["name"],
             "artist": [artist["name"] for artist in random_song["artists"]],
             "cover_img": random_song["album"]["images"][0]["url"],
-            "preview_url": random_song["preview_url"],
+            "preview_url": random_song["preview_url"] or "",
             "spotify_url": random_song["external_urls"]["spotify"],
         }
 

@@ -3,12 +3,11 @@ import axios from "axios";
 
 const Song = () => {
   const [randomSong, setRandomSong] = useState({
-    artist: ["One Direction"],
-    cover_img:
-      "https://i.scdn.co/image/ab67616d0000b273f6b44a561d3d9e904a8a14ec",
-    preview_url: null,
-    spotify_url: "https://open.spotify.com/track/36cpdosXo6ckJaVusYVPle",
-    title: "Steal My Girl - Acoustic Version",
+    artist: [],
+    cover_img: "",
+    preview_url: "",
+    spotify_url: "",
+    title: "",
   });
 
   const getRandomSong = async () => {

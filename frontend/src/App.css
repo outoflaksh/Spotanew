@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +9,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #ff6395;
+  background: #7fd1ab;
 }
 
 p {
@@ -29,7 +30,8 @@ header {
 
 header h1 {
   color: #6b001b;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: "Patua One", sans-serif;
 }
 .container {
   display: flex;
@@ -41,7 +43,7 @@ header h1 {
 .cover img {
   height: 400px;
   width: auto;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
   margin: 10px;
 }
 
@@ -49,6 +51,7 @@ header h1 {
   font-size: 3rem;
   font-weight: 700;
   color: white;
+  text-align: center;
 }
 
 .artist {
@@ -71,15 +74,19 @@ button {
 
 .spotify {
   background: #00e06c;
+  transition: 0.15s ease;
 }
 .spotify:hover {
   background: #00b859;
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.8);
 }
 
 .shuffle {
   background: #b00038;
+  transition: 0.15s ease;
 }
 
 .shuffle:hover {
   background: #88002b;
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.8);
 }
