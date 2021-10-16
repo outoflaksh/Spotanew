@@ -37,7 +37,9 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 20px;
+  height: 100%;
 }
 
 .cover img {
@@ -93,5 +95,38 @@ button {
 
 .warning {
   color: rgb(201, 37, 73);
-  font-weight: 400;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .cover img {
+    height: 300px;
+  }
+  button {
+    width: 60%;
+  }
+  .container {
+    min-height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .cover img {
+    height: 300px;
+  }
+  button {
+    width: 60%;
+  }
+  .container {
+    min-height: 80vh;
+  }
 }
