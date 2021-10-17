@@ -10,4 +10,8 @@ playlist_ids = [
     "37i9dQZF1DX9tPFwDMOaN1",
     "37i9dQZEVXbNG2KDcFcKOF",
     "37i9dQZF1DWXtlo6ENS92N",
+    "37i9dQZF1DXaKIA8E7WcJj",
+    "37i9dQZF1DX2pSTOxoPbx9",
+    "37i9dQZF1DWWjGdmeTyeJ6",
+    "37i9dQZF1DX4pAtJteyweQ",
 ]

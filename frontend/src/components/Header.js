@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header>
-      <h1>randomfy</h1>
+      <h1>randomify</h1>
     </header>
   );
 };

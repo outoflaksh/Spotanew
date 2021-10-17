@@ -18,7 +18,7 @@ const Song = () => {
     console.log(data);
     setRandomSong(data);
 
-    if (data.preview_url == "") {
+    if (data.preview_url === "") {
       setPreviewAvailable(false);
     } else {
       setPreviewAvailable(true);
