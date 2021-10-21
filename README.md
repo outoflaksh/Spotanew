@@ -1,4 +1,4 @@
-# Randomify 
+# Spotanew
 ## Discover exciting music
 
 Work in progress!
