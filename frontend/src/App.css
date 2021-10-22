@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -30,8 +30,9 @@ header {
 
 header h1 {
   color: #6b001b;
-  font-weight: 600;
-  font-family: "Patua One", sans-serif;
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: -0.05em;
 }
 .container {
   display: flex;
