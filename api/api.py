@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route("/random")
+@app.route("/api/random")
 @cross_origin()
 def random_song():
     response = get_random_song()
