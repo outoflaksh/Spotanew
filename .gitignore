@@ -3,7 +3,7 @@
 __pycache__
 secrets.py
 .vscode
-
+venv
 
 # dependencies
 /frontend/node_modules
