@@ -13,10 +13,10 @@ const Song = () => {
   const [previewAvailable, setPreviewAvailable] = useState(true);
 
   const getRandomSong = async () => {
-    const response = await axios.get("https://spotanew-api.herokuapp.com/api/random");
+    const response = await axios.get("http://127.0.0.1:5000/api/random");
     const data = response.data;
-    console.log(data);
     setRandomSong(data);
+    document.body.style = `background: url(${data.cover_img}) no-repeat; background-size: cover;`;
 
     if (data.preview_url === "") {
       setPreviewAvailable(false);
@@ -30,7 +30,7 @@ const Song = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="song-container">
       <div className="title">
         <p>{randomSong.title}</p>
       </div>
@@ -46,11 +46,11 @@ const Song = () => {
           <source src={randomSong.preview_url} />
         </audio>
       </div>
-      <button className="spotify">
-        <a href={randomSong.spotify_url}> Open in Spotify</a>
+      <button className="shuffle control-btn" onClick={getRandomSong}>
+        New random
       </button>
-      <button className="shuffle" onClick={getRandomSong}>
-        Play random
+      <button className="spotify control-btn">
+        <a href={randomSong.spotify_url}> Open in Spotify</a>
       </button>
     </div>
   );
