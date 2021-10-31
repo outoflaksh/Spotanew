@@ -13,7 +13,9 @@ const Song = () => {
   const [previewAvailable, setPreviewAvailable] = useState(true);
 
   const getRandomSong = async () => {
-    const response = await axios.get("http://127.0.0.1:5000/api/random");
+    const response = await axios.get(
+      "http://spotanew-api.herokuapp.com/api/random"
+    );
     const data = response.data;
     setRandomSong(data);
     document.body.style = `background: url(${data.cover_img}) no-repeat; background-size: cover;`;
