@@ -55,7 +55,6 @@ footer {
   height: 5vh;
   padding: 60px;
   background: #05595fda;
-  margin-top: 25px;
   bottom: 0;
 }
 
@@ -102,14 +101,15 @@ footer a {
   }
 }
 
-.loading-container {
+.loading-container,
+.song-container {
   min-height: 80vh;
 }
 
 .song-container {
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 15px;
@@ -178,6 +178,7 @@ footer a {
 .warning {
   color: rgb(114, 13, 13);
   text-align: center;
+  padding: 10px;
 }
 
 @media only screen and (max-width: 600px) {
