@@ -102,8 +102,7 @@ footer a {
   }
 }
 
-.loading-container,
-.song-container {
+.loading-container {
   min-height: 80vh;
 }
 
