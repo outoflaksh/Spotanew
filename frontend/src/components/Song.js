@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Warning from "./Warning";
 import axios from "axios";
+import LoadingScreen from "./LoadingScreen";
 
 const Song = () => {
   const [randomSong, setRandomSong] = useState({
@@ -11,6 +12,7 @@ const Song = () => {
     title: "",
   });
   const [previewAvailable, setPreviewAvailable] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const getRandomSong = async () => {
     const response = await axios.get(
@@ -18,6 +20,7 @@ const Song = () => {
     );
     const data = response.data;
     setRandomSong(data);
+    setLoading(false);
     document.body.style = `background: url(${data.cover_img}) no-repeat; background-size: cover;`;
 
     if (data.preview_url === "") {
@@ -31,7 +34,9 @@ const Song = () => {
     getRandomSong();
   }, []);
 
-  return (
+  return loading ? (
+    <LoadingScreen />
+  ) : (
     <div className="song-container">
       <div className="title">
         <p>{randomSong.title}</p>
