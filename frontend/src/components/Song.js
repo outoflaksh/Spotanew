@@ -13,6 +13,7 @@ const Song = () => {
   });
   const [previewAvailable, setPreviewAvailable] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [progressInfo, setProgressInfo] = useState({});
 
   const getRandomSong = async () => {
     const response = await axios.get(
@@ -47,12 +48,35 @@ const Song = () => {
       <Warning previewAvailable={previewAvailable} />
       <div className="cover">
         <img src={randomSong.cover_img} alt="" />
+        {previewAvailable && (
+          <div class="hp_slide">
+            <div
+              class="hp_range"
+              style={{
+                width:
+                  (progressInfo.currentTime / progressInfo.duration) * 100 +
+                  "%",
+              }}
+            ></div>
+          </div>
+        )}
       </div>
-      <div className="player">
-        <audio src={randomSong.preview_url} autoPlay>
-          <source src={randomSong.preview_url} />
-        </audio>
-      </div>
+      {previewAvailable && (
+        <div className="player">
+          <audio
+            src={randomSong.preview_url}
+            autoPlay
+            onTimeUpdate={(e) => {
+              setProgressInfo({
+                currentTime: e.target.currentTime,
+                duration: e.target.duration,
+              });
+            }}
+          >
+            <source src={randomSong.preview_url} />
+          </audio>
+        </div>
+      )}
       <button className="shuffle control-btn" onClick={getRandomSong}>
         New random
       </button>

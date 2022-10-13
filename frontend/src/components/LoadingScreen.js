@@ -3,7 +3,7 @@ import React from "react";
 const LoadingScreen = () => {
   return (
     <div className="loading-container">
-      <div class="loader"></div>
+      <div className="loader"></div>
       <h1>Fetching random song...</h1>
     </div>
   );
