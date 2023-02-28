@@ -16,7 +16,9 @@ const Song = () => {
   const [progressInfo, setProgressInfo] = useState({});
 
   const getRandomSong = async () => {
-    const response = await axios.get("http://127.0.0.1:8000/random");
+    const response = await axios.get(
+      "https://spotanew-api.onrender.com/random"
+    );
     const data = response.data;
     setRandomSong(data);
     setLoading(false);
