@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-CLIENT_ID = os.environ['CLIENT_ID']
-CLIENT_SECRET = os.environ['CLIENT_SECRET']
+CLIENT_ID = os.environ["CLIENT_ID"]
+CLIENT_SECRET = os.environ["CLIENT_SECRET"]
 
 
 def get_token():
@@ -17,7 +17,6 @@ def get_token():
 
     END_POINT = "https://accounts.spotify.com/api/token"
 
-    response = requests.post(END_POINT, auth=(
-        CLIENT_ID, CLIENT_SECRET), data=payload)
+    response = requests.post(END_POINT, auth=(CLIENT_ID, CLIENT_SECRET), data=payload)
 
     return response.json()["access_token"]
