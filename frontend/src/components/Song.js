@@ -17,7 +17,7 @@ const Song = () => {
 
   const getRandomSong = async () => {
     const response = await axios.get(
-      "https://spotanew-api.herokuapp.com/api/random"
+      "https://spotanew-api.onrender.com/random"
     );
     const data = response.data;
     setRandomSong(data);
