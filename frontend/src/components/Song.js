@@ -22,7 +22,7 @@ const Song = () => {
     const data = response.data;
     setRandomSong(data);
     setLoading(false);
-    document.body.style = `background: url(${data.cover_img}) no-repeat; background-size: cover;`;
+    document.body.style = `background: url(${data.cover_img}) no-repeat; background-size: cover; background-position: center;`;
 
     if (data.preview_url === "") {
       setPreviewAvailable(false);
